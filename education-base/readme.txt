@@ -4,8 +4,8 @@ Contributors: acmethemes
 Tags: blog, e-commerce, education, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, flexible-header, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, wide-blocks
 Requires at least: 4.8
 Requires PHP: 5.6
-Tested up to: 5.9
-Stable tag: 3.0.6
+Tested up to: 6.7
+Stable tag: 3.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,10 @@ Education Base bundles the following third-party resources:
 
 
 == Change log ==
+
+= 3.0.7 - Jan 21 2025 =
+* Added: Enhanced support for the latest WordPress version.
+* Updated: Improved CSS compatibility.
 
 = 3.0.6 - July 31 2023 =
 * Added: Recommended Classic Widgets plugin
