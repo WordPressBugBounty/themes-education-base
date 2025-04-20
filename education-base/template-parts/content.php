@@ -7,8 +7,8 @@
  * @package Acme Themes
  * @subpackage Education Base
  */
-global $education_base_customizer_all_values;
-$no_blog_image = '';
+$education_base_customizer_all_values = education_base_get_theme_options();
+$no_blog_image                        = '';
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="content-wrapper">
@@ -16,7 +16,7 @@ $no_blog_image = '';
 		if ( $education_base_customizer_all_values['education-base-blog-archive-layout'] == 'left-image' &&
 			has_post_thumbnail() ) {
 			$sidebar_layout = education_base_sidebar_selection();
-			$thumbnail = 'full';
+			$thumbnail      = 'full';
 			?>
 			<!--post thumbnal options-->
 			<div class="post-thumb">
@@ -25,23 +25,23 @@ $no_blog_image = '';
 				</a>
 			</div><!-- .post-thumb-->
 			<?php
-		}
-		else{
+		} else {
 			$no_blog_image = 'no-image';
 		}
-		if ( 'post' === get_post_type() ) : ?>
+		if ( 'post' === get_post_type() ) :
+			?>
 			<header class="entry-header <?php echo $no_blog_image; ?>">
 				<div class="entry-meta">
-					<a href="<?php the_permalink()?>">
+					<a href="<?php the_permalink(); ?>">
 						<span class="day-month">
 						<span class="day">
-							<?php echo esc_html( get_the_date('j') ); ?>
+							<?php echo esc_html( get_the_date( 'j' ) ); ?>
 						</span>
 						<span class="month">
-							<?php echo esc_html( get_the_date('M') ); ?>
+							<?php echo esc_html( get_the_date( 'M' ) ); ?>
 						</span>
 					</span>
-						<span class="year"><?php echo esc_html( get_the_date('Y') )?></span>
+						<span class="year"><?php echo esc_html( get_the_date( 'Y' ) ); ?></span>
 					</a>
 
 				</div><!-- .entry-meta -->
@@ -59,7 +59,7 @@ $no_blog_image = '';
 			<?php
 			the_excerpt();
 			$education_base_blog_archive_read_more = education_base_blog_archive_more_text();
-			if( !empty( $education_base_blog_archive_read_more )){
+			if ( ! empty( $education_base_blog_archive_read_more ) ) {
 				?>
 				<a class="btn btn-primary" href="<?php the_permalink(); ?> ">
 					<?php echo $education_base_blog_archive_read_more; ?>

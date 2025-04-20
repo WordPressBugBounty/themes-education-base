@@ -8,14 +8,14 @@
  * @subpackage Education Base
  */
 get_header();
-global $education_base_customizer_all_values;
+$education_base_customizer_all_values = education_base_get_theme_options();
 ?>
 <div class="wrapper inner-main-title">
 	<div class="container">
 		<header class="entry-header init-animate slideInUp1">
 			<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'education-base' ); ?></h1>
 			<?php
-			if( 1 == $education_base_customizer_all_values['education-base-show-breadcrumb'] ){
+			if ( 1 == $education_base_customizer_all_values['education-base-show-breadcrumb'] ) {
 				education_base_breadcrumbs();
 			}
 			?>
@@ -34,4 +34,5 @@ global $education_base_customizer_all_values;
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- #content -->
-<?php get_footer();
+<?php
+get_footer();
